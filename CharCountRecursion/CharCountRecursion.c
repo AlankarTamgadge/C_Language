@@ -1,0 +1,48 @@
+
+/*
+Problem Statement : Accept string from user and count number of characters.
+Input : Hello
+Output : 5
+
+*/
+
+#include <stdio.h>				//for i/o functions
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Function Name	:	CountChar
+//	Input			:	Integer
+//	Output			:	Integer
+//	Description		:	Accepts string from user and counts number of characters.
+//	Author			:	Alankar Tamgadge
+//	Date			:	19 September 2020
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+int CountChar(char * str)
+{	
+	static int iCnt = 0;
+	if(*str != '\0')
+	{
+		iCnt++;
+		str++;
+		CountChar(str);
+	}
+	return iCnt;
+}
+
+int main()
+{
+	char arr[20] = {'\0'};
+	int iRet = 0;
+	printf("Enter String\n");
+	scanf(" %[^\n]",arr);
+
+	iRet = CountChar(arr);
+	printf("%d Characters.\n",iRet);
+
+	return 0;
+}
+

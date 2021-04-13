@@ -1,0 +1,29 @@
+#include"Header.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name		:			DollarToINR
+//  Input				:			Integer
+//  Output				:			Integer 
+//  Description			:			It is used to US Dollar To INR.
+//  Date				:			9 August 2020
+//  Author name			:			Alankar Tamgadge
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+int DollarToINR(
+					int iUsd		//input argument
+				)
+{
+	int iRup = 0.0;
+
+	if (iUsd < 0 )
+	{
+		iUsd = -iUsd;
+	}
+			
+	iRup = (iUsd) * (70);
+	
+	return iRup;
+}

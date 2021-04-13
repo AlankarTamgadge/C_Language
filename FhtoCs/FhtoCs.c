@@ -1,0 +1,27 @@
+#include"Header.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name		:			FhtoCs
+//  Input				:			float
+//  Output				:			double 
+//  Description			:			It is used to convert Fahrenheit into celsius.
+//  Date				:			7 August 2020
+//  Author name			:			Alankar Tamgadge
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+double FhtoCs(
+				float fTemp			//input argument
+			  )
+{
+	double dCelsius = 0.0;
+
+	
+		
+	dCelsius = (fTemp - 32) * (5.0/9.0);
+	
+
+	return dCelsius;
+}

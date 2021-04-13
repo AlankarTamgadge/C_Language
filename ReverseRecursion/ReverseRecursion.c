@@ -1,0 +1,52 @@
+
+/*
+Problem Statement : Accept number from user and return reverse number.
+
+Input : 123
+Output : 321
+
+*/
+
+#include <stdio.h>				//for i/o functions
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Function Name	:	Reverse
+//	Input			:	Integer
+//	Output			:	Display
+//	Description		:	Accept number from user and returns reverse number.
+//	Author			:	Alankar Tamgadge
+//	Date			:	19 September 2020
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+void Reverse(int no)
+{	
+	static int iDigit = 0, iSum = 1;
+	if(no<0)
+	{
+		no = -no; 
+	}
+
+	if(no > 0)
+	{
+		iDigit = no % 10;
+		printf("%d  ",iDigit);
+		no = no / 10;
+		Reverse(no);
+	}
+}
+
+int main()
+{
+	int iValue = 0;
+	printf("Enter number\n");
+	scanf("%d",&iValue);
+
+	Reverse(iValue);
+
+	return 0;
+}
+
